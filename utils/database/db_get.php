@@ -1,5 +1,4 @@
 <?php
-include_once $serverPath.'utils/database/database_connection.php';
 include_once $serverPath.'utils/database/database_utilities.php';
 
 function getAllData($table) {

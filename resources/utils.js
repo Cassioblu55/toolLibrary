@@ -190,6 +190,8 @@ function addTime(hash, day, openClosed, time){
 
 app.controller("UtilsController", ['$scope', "$http", "$window", function($scope, $http, $window){	
 
+    $scope.baseURL = baseURL;
+
     $scope.editOrCreate = function(){
         return (getID()) ? "Edit" : "Create";
     }

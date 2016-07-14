@@ -4,13 +4,13 @@ include_once "../../config/config.php";
 include_once $serverPath."resources/templates/head.php";
 
 $table = "tool";
+$route = $baseURL;
 
-
-
+include_once $serverPath."resources/templates/utils/save.php";
 
 ?>
 <div ng-controller="ToolEditController">
-	<form ng-submit="getSumbitLink('edit.php')">
+	<form action="{{getSumbitLink('edit.php')}}" method="post">
 		<div class="col-md-6 col-sm-12">
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -25,8 +25,9 @@ $table = "tool";
 
 					<div class="form-group">
 						<label for="type">Tool Type</label>
-						<select class="form-control" id="type" name="tool_type_id" ng-model="tool.tool_type_id" ng-options="type as type.type_name for type in toolTypes">
+						<select class="form-control" id="type" name="tool_type_id" ng-model="tool.tool_type_id">
 							<option value=''>Select One</option>
+							<option ng-repeat="type in toolTypes" value={{type.id}}>{{type.type_name}}</option>
 						</select>
 					</div>
 
@@ -34,6 +35,12 @@ $table = "tool";
 						<label for="quantity">Quantity</label>
 						<input class="form-control" name="quantity" ng-model="tool.quantity" type="number" id="quantity" placeholder="Quantity" min="0" ng-min="0">
 					</div>
+				</div>
+
+				<div class="panel-footer">
+					<button class="btn btn-primary" type="submit">{{saveOrAdd()}}</button>
+					<a class="btn btn-default" ng-href="{{baseURL}}">Cancel</a>
+
 				</div>
 
 			</div>
@@ -49,11 +56,17 @@ $table = "tool";
 		angular.extend(this, $controller('UtilsController', {$scope: $scope}));
 
 		$scope.setById(function(data){
-			$scope.tool = data;
+			var tool = data;
+			tool.quantity = Number(tool.quantity);
+			$scope.tool = tool;
 		});
 
 		$scope.setFromGet(baseURL+"views/toolType/data.php", function(data){
 			$scope.toolTypes = data;
+			angular.forEach($scope.toolTypes,  function (row) {
+				row.id = Number(row.id);
+			})
+
 		});
 
 
