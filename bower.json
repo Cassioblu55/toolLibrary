@@ -1,0 +1,31 @@
+{
+  "name": "tool_library",
+  "homepage": "https://github.com/Cassioblu55/toolLibrary",
+  "authors": [
+    "Cassio Hudson <cassioblubyrd@gmail.com>"
+  ],
+  "description": "tool browsing and rental web application",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "keywords": [
+    "tool",
+    "cassiohudson.com"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "resources/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-grid": "^3.2.1",
+    "bootstrap": "^3.3.6"
+  }
+}
