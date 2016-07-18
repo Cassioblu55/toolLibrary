@@ -1,10 +1,9 @@
 <?php
 
-include_once "../../config/config.php";
+include_once "config.php";
 include_once $serverPath."resources/templates/head.php";
 
-$table = "tool";
-$route = $baseURL;
+$route = "index.php";
 
 include_once $serverPath."resources/templates/utils/save.php";
 
@@ -31,6 +30,9 @@ include_once $serverPath."resources/templates/utils/save.php";
 						</select>
 					</div>
 
+					<a ng-href="{{baseURL+'views/toolType/edit.php'}}" target="_blank">Add Tool Type</a>
+					<div style="color: grey">Refresh page to see new additions.</div>
+
 					<div class="form-group">
 						<label for="quantity">Quantity</label>
 						<input class="form-control" name="quantity" ng-model="tool.quantity" type="number" id="quantity" placeholder="Quantity" min="0" ng-min="0">
@@ -39,7 +41,7 @@ include_once $serverPath."resources/templates/utils/save.php";
 
 				<div class="panel-footer">
 					<button class="btn btn-primary" type="submit">{{saveOrAdd()}}</button>
-					<a class="btn btn-default" ng-href="{{baseURL}}">Cancel</a>
+					<a class="btn btn-default" ng-href="index.php">Cancel</a>
 
 				</div>
 

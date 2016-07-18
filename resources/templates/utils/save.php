@@ -1,6 +1,5 @@
 <?php
 	include_once $serverPath."utils/database/db_post.php";
-
 	if(!isset($table)){
 		echo "Table has not been set";
 	}else{
@@ -14,14 +13,18 @@
 			} else {
 				$id = insertFromPostWithIdReturn ( $table );
 			}
+			if(isset($runAfterSave)){
+				$runAfterSave();
+			}
+
+			if(isset($routeToShow) && $routeToShow == true){
+				header ( "Location: show.php?id=" . $id );
+				die ( "Redirecting to show.php" );
+			}
 
 			if(isset($route)){
 				header ( "Location: $route");
 				die ( "Redirecting to $route" );
-
-			}else{
-				header ( "Location: show.php?id=" . $id );
-				die ( "Redirecting to show.php" );
 
 			}
 		}

@@ -16,7 +16,7 @@ function runQuery($query) {
 	return $results;
 }
 
-function getTableQuote($table) {
+function getQuote($table) {
 	return "`" . $table . "`";
 }
 
@@ -45,8 +45,31 @@ function getColumnNames($table) {
 }
 
 function getColumns($table) {
-	$query = "SHOW COLUMNS FROM " . getTableQuote ( $table );
+	$query = "SHOW COLUMNS FROM " . getQuote ( $table );
 	return runQuery ( $query );
+}
+
+function joinParent($childTableData, $parentTableData, $childTableForeignKeyName){
+	$mergedData = [];
+	foreach($childTableData as $childRow){
+		foreach ($parentTableData as $parentRow){
+			if($childRow[$childTableForeignKeyName] == $parentRow['id']){
+				$childRow = mergeWithDominace($childRow, $parentRow);
+			}
+		}
+		array_push($mergedData, $childRow);
+	}
+	return $mergedData;
+}
+
+function mergeWithDominace($dominateObject, $submissiveObject){
+	$submissiveObjectKeys = array_keys($submissiveObject);
+	foreach ($submissiveObjectKeys as $key){
+		if(!isset($dominateObject[$key])){
+			$dominateObject[$key] = $submissiveObject[$key];
+		}
+	}
+	return $dominateObject;
 }
 
 ?>

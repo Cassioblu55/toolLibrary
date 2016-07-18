@@ -8,7 +8,7 @@ function update($table, $data) {
 }
 
 function makeBaseUpdate($table, $data) {
-	$update = "UPDATE " . getTableQuote ( $table ) . " SET ";
+	$update = "UPDATE " . getQuote ( $table ) . " SET ";
 	foreach ( $data as $columnName => $value ) {
 		$update .="`" .$columnName . "`=" . getCleanValue ( $value ) . ", ";
 	}
@@ -30,7 +30,7 @@ function getInsertStatement($table, $data) {
 	$columns = cutString ( $columns, 2 ) . ")";
 	$values = cutString ( $values, 2 ) . ")";
 
-	return "INSERT INTO " . getTableQuote ( $table ) . $columns . " VALUES " . $values . ";";
+	return "INSERT INTO " . getQuote ( $table ) . $columns . " VALUES " . $values . ";";
 }
 
 function runInsert($insert) {
@@ -43,6 +43,11 @@ function runInsert($insert) {
 		die ( "Could not complete request: " . $insert );
 	}
 	$db->close ();
+}
+
+function deleteFrom($table, $id) {
+	$insert = "DELETE FROM " . getQuote ( $table ) . " WHERE id=" . $id . ";";
+	runInsert ( $insert );
 }
 
 function updateFromPost($table) {
