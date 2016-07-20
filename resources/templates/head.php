@@ -13,15 +13,7 @@
 	<link rel="stylesheet" type="text/css"  href="<?php echo $baseURL;?>resources/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="icon" href="<?php echo $baseURL;?>resources/icons/favicon.ico">
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>resources/layout.css"/>
-
+	<script src="http://www.cassiohudson.com/utilities/js/errorDisplay.js"></script>
 </head>
 
-<?php
-include_once $serverPath."utils/errorDisplay.php";
-
-if(!empty($_GET['error'])){
-	sendErrorMessage($_GET['error']);
-};
-
-?>
 
