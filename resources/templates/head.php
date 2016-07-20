@@ -1,7 +1,6 @@
 <!doctype html>
 <html ng-app="app">
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<script>var baseURL="<?php echo $baseURL;?>"</script>
 
 <head>
 	<script src="<?php echo $baseURL;?>resources/jquery/dist/jquery.js"></script>
@@ -15,5 +14,6 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo $baseURL; ?>resources/layout.css"/>
 	<script src="http://www.cassiohudson.com/utilities/js/errorDisplay.js"></script>
 </head>
+<script>var baseURL="<?php echo $baseURL;?>"</script>
 
 

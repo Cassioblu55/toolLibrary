@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6acc5617-7583-407d-91c4-031cc1ef87bc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/utils/errorDisplay.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/tool_library.iml" afterPath="$PROJECT_DIR$/.idea/tool_library.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/templates/head.php" afterPath="$PROJECT_DIR$/resources/templates/head.php" />
     </list>
     <ignored path="tool_library.iws" />
@@ -66,20 +62,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="head.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="head.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/templates/head.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+            <state relative-caret-position="240">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="http_www.cassiohudson.com_utilities_js_errorDisplay.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="http_www.cassiohudson.com_utilities_js_errorDisplay.js" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_www.cassiohudson.com_utilities_js_errorDisplay.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1406">
+            <state relative-caret-position="0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -345,7 +341,7 @@
       <workItem from="1468467061678" duration="773000" />
       <workItem from="1468467868627" duration="19373000" />
       <workItem from="1468797868263" duration="935000" />
-      <workItem from="1468988911378" duration="3446000" />
+      <workItem from="1468988911378" duration="3625000" />
     </task>
     <task id="LOCAL-00001" summary="Finished tool edit page">
       <created>1468475500399</created>
@@ -358,7 +354,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24527000" />
+    <option name="totallyTimeSpent" value="24706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="27" width="1236" height="769" extended-state="0" />
@@ -667,18 +663,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/templates/head.php">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_www.cassiohudson.com_utilities_js_errorDisplay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="58" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_www.cassiohudson.com_utilities_js_errorDisplay.js">
+    <entry file="file://$PROJECT_DIR$/resources/templates/head.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1406">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="240">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
           <folding />
         </state>
       </provider>
