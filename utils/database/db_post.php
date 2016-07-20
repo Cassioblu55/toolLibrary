@@ -90,8 +90,4 @@ function runInsertWithIdReturn($insert) {
 	$db->close ();
 	return $inserted;
 }
-
-
 ?>
-
-
