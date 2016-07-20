@@ -1,7 +1,6 @@
 <?php
 
 include_once "config.php";
-include_once $serverPath."resources/templates/head.php";
 
 $route = "index.php";
 
@@ -27,8 +26,8 @@ function findByProperty($table, $columnName, $value){
 	}
 }
 
-
 include_once $serverPath."resources/templates/utils/save.php";
+include_once $serverPath."resources/templates/head.php";
 
 ?>
 <div ng-controller="ToolTypeEditController">
